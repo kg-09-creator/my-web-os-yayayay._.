@@ -1,0 +1,41 @@
+.closebutton {
+    cursor: pointer; 
+    background-color: #5e8bec; 
+    border-radius: 16px; 
+    width: 16px; 
+    height: 16px; 
+    margin-left: 4px; 
+    margin-right: 2px; 
+    border: solid 1px rgba(0,0,0,0.25);
+}
+
+.windowheader {
+    cursor: move; 
+    display: flex; 
+    justify-content: center; 
+    margin-right: 8px;
+}
+
+.headertext {
+    font-weight: 500; 
+    color: #ffffff; 
+    margin-left: 2px;
+}
+
+.window {
+    position: absolute; 
+    display: flex; 
+    flex-direction: column; 
+    background-color: rgba(256, 256, 256, 0.25); 
+    backdrop-filter: blur; 
+    top: 20%; 
+    left: 35%; 
+    padding: 16px; 
+    border: solid; 
+    width: 400px; 
+    border-radius: 16px;
+}
+
+.selected {
+    
+}
