@@ -1,9 +1,18 @@
+var biggestIndex = 1
+var selectedIcon = undefined 
+
+var welcomeScreen = document.querySelector("#welcome")
+var welcomeScreenClose = document.querySelector("#welcomeclose")
+var welcomeScreenOpen = document.querySelector("#welcomeopen")
+
+var notesScreen = document.querySelector("#wavenotes")
+var notesScreenClose = document.querySelector("#notesclose")
+
 setInterval(function () {
             document.querySelector("#timeElement").innerHTML = new 
             Date().toLocaleString();
             }, 1000);
 
-dragElement(document.getElementById("welcome"));
 function dragElement(element) {
     var initialX = 0;
     var initialY = 0;
@@ -45,29 +54,9 @@ function dragElement(element) {
     }
 }    
 
-var welcomeScreen = document.querySelector("#welcome")
-
 function closeWindow(element) {
     element.style.display = "none"
 }
-
-function openWindow(element) {
-    element.style.display = "flex";
-    element.style.flexDirection = "column";
-}
-
-var welcomeScreenClose = document.querySelector("#welcomeclose")
-var welcomeScreenOpen = document.querySelector("#welcomeopen")
-
-welcomeScreenClose.addEventListener("click", function() {
-    closeWindow(welcomeScreen);
-});
-
-welcomeScreenOpen.addEventListener("click", function () {
-    openWindow(welcomeScreen);
-});
-
-var selectedIcon = undefined 
 
 function selectIcon(element) {
     element.classList.add("selected");
@@ -76,7 +65,7 @@ function selectIcon(element) {
 
 function deselectIcon(element) {
     element.classList.remove("selected")
-    deselectIcon = undefined
+    selectedIcon = undefined
 }
 
 function handleIconTap (element) {
@@ -86,4 +75,72 @@ function handleIconTap (element) {
     } else {
         selectIcon(element)
     }
+}
+
+function openWindow(welcomeScreen) {
+    welcomeScreen.style.display = "flex";
+    welcomeScreen.style.flexDirection = "column";
+    biggestIndex++;
+    welcomeScreen.style.zIndex = biggestIndex;
+    topBar.style.zIndex = biggestIndex + 1;
+}
+
+function addWindowTapHandling(welcomeScreen) {
+    element.addEventListener("mousedown", () =>
+    handleWindowTap(welcomeScreen))
+}
+
+function handleWindowTap(welcomeScreen) {
+    biggestIndex++;
+    welcomeScreen.style.zIndex = biggestIndex;
+    topBar.style.zIndex = biggestIndex + 1;
+    deselectIcon(selectedIcon)
+}
+
+function openNotesWindow(notesScreen) {
+    notesScreen.style.display = "flex";
+    biggestIndex++;
+    element.style.zIndex = biggestIndex;
+    topBar.style.zIndex = biggestIndex + 1;
+}
+
+function addWindowTapHandling(notesScreen) {
+    element.addEventListener("mousedown", () =>
+    handleWindowTap(notesScreen))
+}
+
+function handleWindowTap(notesScreen) {
+    biggestIndex++;
+    notesScreen.style.zIndex = biggestIndex;
+    topBar.style.zIndex = biggestIndex + 1;
+    deselectIcon(selectedIcon)
+}
+
+dragElement(document.getElementById("welcome"));
+dragElement(document.querySelector("#wavenotes"))
+
+welcomeScreenClose.addEventListener("click", function() {
+    closeWindow(welcomeScreen);
+});
+
+welcomeScreenOpen.addEventListener("click", function () {
+    openWindow(welcomeScreen);
+});
+
+notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
+
+var notesIcon = document.querySelector("#notesIcon");
+
+if(notesIcon) {
+    notesIcon.addEventListener("click", function() {
+        handleIconTap(notesIcon, notesScreen)
+    });
+}
+
+var showd = document.querySelector("#showd")
+if(showd) {
+    showd.addEventListener("click", function(){
+        closeWindow(welcomeScreen);
+        closeWindow(notesScreen)
+    });
 }

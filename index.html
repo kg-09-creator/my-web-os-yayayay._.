@@ -4,9 +4,13 @@
         <link rel = "stylesheet" type="text/css" href="style.css"/>
     </head>
     <body style = "background-image: url(./oceanwater2.jpg); height:100vh; background-size: cover; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #fff; margin: 0; overflow: hidden;">
+        <div id="top"></div>
+                
         <div class = "window" id = "welcome">
+            
             <div style = "display: flex; align-items: center; width: 100%; border-bottom: solid 1px rgba(256,256,256,0.2); margin-bottom: 12px; padding-bottom: 6px;">
-                <div id="welcomeclose" class = closebutton></div>    
+                
+                <div id="welcomeclose" class = "closebutton"></div>    
                 <div class = "windowheader" id = "welcomeheader">
                  <p class = "headertext">Welcome</p>
                  </div>
@@ -22,13 +26,37 @@
             <p id = "timeElement" style = "margin-right: 8px;">6/15/2026 8:47 PM</p>
         </div>
         </div>
-        <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
-            <div class ="selected">
-            <p>insert name of app here</p>
-            <img style = "width: 64px; height: 64px; border-radius: 64px; border: solid 1px rgba(0,0,0,0.25); object-fit: cover;" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b2NlYW58ZW58MHx8MHx8fDA%3D"/>
-            <p style = "margin: 0px; color:#ffffff;"></p>
-            </div>
-        </div>
+  
+
+<div class="window" id="wavenotes" style=" position: absolute; left: 32px; top: 120px; margin-right: 100px;">
+    
+    <div style="display: flex; align-items: center; width: 100%; border-bottom: solid 1px rgba(256,256,256,0.2); margin-bottom: 12px; padding-bottom: 6px;">
+        <div class="windowheader" id="notesheader"></div>
+        <div id="notesclose" class="closebutton"></div>    
+        <p class="headertext">WaveNotes</p>
+    </div>
+    <div id="desktopApps" style="padding-top: 25px;">
+    <div class="selected" id="notesIcon">
+        <img style="width: 64px; height: 64px; border-radius: 32px; border: solid 1px rgba(0,0,0,0.25); object-fit: cover;" src="https://plus.unsplash.com/premium_photo-1675620963970-41055a7d6cfc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"/>
+        <h1>WaveNotes</h1>
+    </div>
+</div>
+    <div>
+        <p style="margin: 0px; color:#ffffff;">Write notes here! Anything ocean/marine-related is a bonus yayayay</p>
+        <li style = "margin-left: 10px;">
+            <strong>Facts</strong> 
+        </li>
+        <li  style = "margin-left: 24px;">The oceans cover more than 2/3 of the planet!
+            </li>
+            <li style = "margin-left: 24px;">
+                The Pacific Ocean is the world's largest ocean.
+            </li>
+            <li style = "margin-left: 24px;">
+                So far, humans have only explored about 5% of the ocean.
+            </li>
+    </div>
+</div>
+<p id="showd" style = "margin-top: 85px; margin-left: 24px;"><strong>Minimize all windows</strong></p>
         <script src = "script.js"></script>
     </body>
 </html>
