@@ -11,6 +11,7 @@ Demo link: https://kg-09-creator.github.io/my-web-os-yayayay._./
 
 How to use: Open the link. click and drag the windows and hit "Minimize all windows" to close all windows, and click the blue circles to close each individual window. Then click WaveOS in the upper left corner to bring back the welcome window.
 
+Features:
 - multiple draggable windows
 -   a notes app
 -   a welcome screen
