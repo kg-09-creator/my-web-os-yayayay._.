@@ -9,7 +9,7 @@ Basically it's an ocean themed Operating System featuring draggable windows - it
 Demo link: https://kg-09-creator.github.io/my-web-os-yayayay._./
 
 
-How to use: Open the link. click and drag the windows and hit "Minimize all windows" to close all windows, and click the blue circles to close each individual window. Then click WaveOS in the upper left corner to bring back the welcome window.
+How to use: Open the link. you can play around with the UI by clicking and dragging the windows and can click "Minimize all windows" to close all windows, and click the blue circles to close each individual window. Then click WaveOS in the upper left corner to bring back the welcome window. Reload the page to bring back all windows and restore the original UI.
 
 Features:
 - multiple draggable windows
